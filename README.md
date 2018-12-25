@@ -31,6 +31,7 @@ appuser@someinternalhost:~$
 Добавляем\создаем в ~/.ssh/config
 
 cat <<EOF>> ~/.ssh/config
+  
 Host someinternalhost
     
          Hostname  10.132.0.3

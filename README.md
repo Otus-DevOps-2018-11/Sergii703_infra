@@ -29,7 +29,8 @@ appuser@someinternalhost:~$
 Подключение из консоли при помощи команды вида ssh someinternalhost из локальной консоли рабочего устройства
 Добавляем\создаем в ~/.ssh/config
 
-cat <EOF> ~/.ssh/config
+
+cat <<EOF>> ~/.ssh/config
 
 Host someinternalhost
     

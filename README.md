@@ -11,6 +11,7 @@ $ ssh-add ~/.ssh/appuser
 Identity added: /c/Users/Sergii/.ssh/appuser (/c/Users/Sergii/.ssh/appuser)
 
 $ ssh -i ~/.ssh/appuser -J appuser@35.205.72.17 appuser@10.132.0.3
+
 Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.15.0-1025-gcp x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -36,6 +37,7 @@ Host someinternalhost
     
          Hostname  10.132.0.3
          user  appuser
+         cat <<EOF>> ~/.ssh/config
          ProxyJump  bastion
 
 Host bastion

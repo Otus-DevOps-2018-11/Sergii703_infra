@@ -1,13 +1,19 @@
 # Sergii703_infra
 Sergii703 Infra repository
 
+bastion_IP = 35.205.72.17
+
+someinternalhost_IP = 10.132.0.3
+
 Подключение к someinternalhost в одну команду
 $ ssh-agent bash
 
 $ ssh-add -L
+
 The agent has no identities.
 
 $ ssh-add ~/.ssh/appuser
+
 Identity added: /c/Users/Sergii/.ssh/appuser (/c/Users/Sergii/.ssh/appuser)
 
 $ ssh -i ~/.ssh/appuser -J appuser@35.205.72.17 appuser@10.132.0.3
@@ -25,6 +31,7 @@ Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.15.0-1025-gcp x86_64)
 0 updates are security updates.
 
 Last login: Tue Dec 25 17:32:31 2018 from 10.132.0.2
+
 appuser@someinternalhost:~$
 
 Подключение из консоли при помощи команды вида ssh someinternalhost из локальной консоли рабочего устройства

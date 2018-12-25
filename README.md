@@ -30,16 +30,13 @@ appuser@someinternalhost:~$
 Подключение из консоли при помощи команды вида ssh someinternalhost из локальной консоли рабочего устройства
 Добавляем\создаем в ~/.ssh/config
 
-
 cat <<EOF>> ~/.ssh/config
-
 Host someinternalhost
     
          Hostname  10.132.0.3
          user  appuser
-         cat <<EOF>> ~/.ssh/config
          ProxyJump  bastion
-
+         
 Host bastion
 
          HostName  35.210.101.213

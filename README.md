@@ -1,7 +1,7 @@
 # Sergii703_infra
 Sergii703 Infra repository
 
-Подключения к someinternalhost в одну команду из вашего рабочего устройства
+РџРѕРґРєР»СЋС‡РµРЅРёРµ Рє someinternalhost РІ РѕРґРЅСѓ РєРѕРјР°РЅРґСѓ
 $ ssh-agent bash
 
 $ ssh-add -L
@@ -26,15 +26,18 @@ Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.15.0-1025-gcp x86_64)
 Last login: Tue Dec 25 17:32:31 2018 from 10.132.0.2
 appuser@someinternalhost:~$
 
-Подключения из консоли при помощи команды вида ssh someinternalhost из локальной консоли рабочего устройства
-
+РџРѕРґРєР»СЋС‡РµРЅРёРµ РёР· РєРѕРЅСЃРѕР»Рё РїСЂРё РїРѕРјРѕС‰Рё РєРѕРјР°РЅРґС‹ РІРёРґР° ssh someinternalhost РёР· Р»РѕРєР°Р»СЊРЅРѕР№ РєРѕРЅСЃРѕР»Рё СЂР°Р±РѕС‡РµРіРѕ СѓСЃС‚СЂРѕР№СЃС‚РІР°
+Р”РѕР±Р°РІР»СЏРµРј\СЃРѕР·РґР°РµРј РІ ~/.ssh/config
 cat <<EOF>> ~/.ssh/config
+
 Host someinternalhost
+    
          Hostname  10.132.0.3
          user  appuser
          ProxyJump  bastion
 
 Host bastion
+
          HostName  35.210.101.213
          User  appuser
          IdentityFile ~/.ssh/appuser

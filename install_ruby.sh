@@ -1,5 +1,5 @@
 #!/bin/bash
 #refresh apt
-apt update
+sudo apt update
 #install ruby and bundler
-apt install -y ruby-full ruby-bundler build-essential
+sudo apt install -y ruby-full ruby-bundler build-essential

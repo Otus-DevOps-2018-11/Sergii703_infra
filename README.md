@@ -1,8 +1,8 @@
 # Sergii703_infra
 
-reddit-app_IP = 35.204.157.254
+testapp_IP = 35.204.157.254
 
-reddit-app_port = 9292
+testapp_port = 9292
 
 Выполнено ДЗ №4
 

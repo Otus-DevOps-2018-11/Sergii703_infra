@@ -6,3 +6,4 @@ cd redit && bundle install
 # start server and checking port
 puma -d
 ps aux | grep puma
+

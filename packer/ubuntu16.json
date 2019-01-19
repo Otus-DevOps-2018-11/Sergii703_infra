@@ -16,7 +16,13 @@
 	    "tags": "puma-server"
         }
     ],
-   "provisioners": [
+{
+    "variables": {
+    	   "project_id": "null",
+    	   "family": "null",
+	   "machine_type": "f1-micro"
+	},
+    "provisioners": [
         {
             "type": "shell",
             "script": "scripts/install_ruby.sh",

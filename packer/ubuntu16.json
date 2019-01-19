@@ -1,4 +1,9 @@
 {
+    "variables": {
+           "project_id": "null",
+           "family": "null",
+           "machine_type": "f1-micro"
+        },
     "builders": [
         {
             "type": "googlecompute",
@@ -16,12 +21,6 @@
 	    "tags": "puma-server"
         }
     ],
-{
-    "variables": {
-    	   "project_id": "null",
-    	   "family": "null",
-	   "machine_type": "f1-micro"
-	},
     "provisioners": [
         {
             "type": "shell",

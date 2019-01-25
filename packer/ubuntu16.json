@@ -1,8 +1,8 @@
 {
     "variables": {
-           "project_id": "sergii703",
-           "family": "reddit_base",
-           "machine_type": "f1-micro"
+           "project_id": null,
+           "family": null,
+           "machine_type": null
         },
 
 	

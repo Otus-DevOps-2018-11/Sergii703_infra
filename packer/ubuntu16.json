@@ -1,7 +1,7 @@
 {
     "variables": {
-           "project_id": "null",
-           "family": "null",
+           "project_id": "sergii703",
+           "family": "reddit-base",
            "machine_type": "f1-micro"
         },
     "builders": [

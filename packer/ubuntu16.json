@@ -1,19 +1,21 @@
 {
     "variables": {
-           "project_id": "null",
-           "family": "null",
+           "project_id": "sergii703",
+           "family": "reddit_base",
            "machine_type": "f1-micro"
         },
-    "builders": [
+
+	
+"builders": [
         {
-            "type": "googlecompute",
-            "project_id": "{{user `project_id`}}",
+            	"type": "googlecompute",
+		"project_id": "{{user {'project_id'}}",
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
-            "source_image_family": "{{user `family`}}",
+            "source_image_family": "{{user 'family'}}",
             "zone": "europe-west1-b",
             "ssh_username": "appuser",
-            "machine_type": "{{user `machine_type`}}",
+            "machine_type": "{{user 'machine_type'}}",
 	    "image_description": "reddit_ubuntu_iso",
 	    "disk_size": "10",
 	    "disk_type": "pd-standard",

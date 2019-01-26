@@ -1,1 +1,2 @@
-appserver ansible_host=35.1320.22 ansible_private_key_file=~/.ssh/appuser
+appserver ansible_host=35.233.115.79 
+dbserver ansible_host=34.76.199.146

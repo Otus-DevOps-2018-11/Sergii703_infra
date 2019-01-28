@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 ---
+=======
+>>>>>>> 1690a334e7c20319a1e99ad2309dd0971cd7539e
 - name: Clone
   hosts: app
   tasks:

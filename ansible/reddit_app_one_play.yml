@@ -18,8 +18,13 @@
     - name: Add unit file for Puma
       become: true
       copy:
+<<<<<<< HEAD
         src: files/puma.service
         dest: /etc/systemd/system/puma.service
+=======
+       src: files/puma.service
+       dest: /etc/systemd/system/puma.service
+>>>>>>> ansible-2
       tags: app-tag
       notify: reload puma
 

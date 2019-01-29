@@ -18,8 +18,8 @@
     - name: Add unit file for Puma
       become: true
       copy:
-             src: files/puma.service
-             dest: /etc/systemd/system/puma.service
+        src: files/puma.service
+        dest: /etc/systemd/system/puma.service
       tags: app-tag
       notify: reload puma
 

@@ -3,5 +3,5 @@
   hosts: appserver
   become: true
   roles:
-   - appserver
+   - app
    - jdauphant.nginx

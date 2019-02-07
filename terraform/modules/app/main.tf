@@ -25,11 +25,11 @@ resource "google_compute_instance" "app" {
 }
 
 resource "google_compute_address" "app_ip" {
-  name = "reddit-app-ip"
+  name = "reddit-app-ip-${var.environment}"
 }
 
 resource "google_compute_firewall" "firewall_nginx_proxy" {
-  name = "allow-nginx-proxy-${var.environment}"
+  name = "nginx-proxy-${var.environment}"
 
   network = "default"
 
@@ -37,7 +37,7 @@ resource "google_compute_firewall" "firewall_nginx_proxy" {
     protocol = "tcp"
     ports    = ["80"]
   }
-  source_ranges = ["0.0.0.0/0"]
-  target_tags = ["reddit-app"]
-}
 
+  source_ranges = ["0.0.0.0/0"]
+  target_tags   = ["reddit-app"]
+}

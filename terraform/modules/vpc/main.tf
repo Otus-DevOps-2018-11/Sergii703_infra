@@ -1,5 +1,5 @@
 resource "google_compute_firewall" "firewall_ssh" {
-  name    = "default-allow-ssh"
+  name    = "ssh-default-${var.environment}"
   network = "default"
 
   allow {
@@ -9,35 +9,18 @@ resource "google_compute_firewall" "firewall_ssh" {
 
   source_ranges = "${var.source_ranges}"
 }
-resource "google_compute_firewall" "firewall_puma" {
-  name = "allow-puma-default"
 
- 
+resource "google_compute_firewall" "firewall_puma" {
+  name = "puma-default-${var.environment}"
+
   network = "default"
 
-  
   allow {
     protocol = "tcp"
     ports    = ["9292"]
   }
 
-  
   source_ranges = ["0.0.0.0/0"]
 
-  
   target_tags = ["reddit-app"]
-}
-
-
-resource "google_compute_firewall" "firewall_mongo" {
-  name    = "allow-mongo-default"
-  network = "default"
-
-  allow {
-    protocol = "tcp"
-    ports    = ["27017"]
-  }
-
-  target_tags = ["reddit-db"]
-  source_tags = ["reddit-app"]
 }
